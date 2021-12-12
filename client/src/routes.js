@@ -1,4 +1,4 @@
-import { ADMIN_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, REGISTRATION_ROUTE } from "./utils/consts"
+import { ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, MAIN_ROUTE } from "./utils/consts"
 
 export const authRoutes = [
     {
@@ -18,6 +18,6 @@ export const publicRoutes = [
     },
     {
         path: MAIN_ROUTE,
-        Component: MainTables
+        Component: PageTable
     }
 ]
