@@ -6,6 +6,7 @@ import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import { login, registration } from '../http/userAPI';
 import { LOGIN_ROUTE, MAIN_ROUTE, REGISTRATION_ROUTE } from '../utils/consts';
 import { Context } from "../index";
+import '../Auth.css'
 
 const Auth =  observer (() => {
 
@@ -32,27 +33,26 @@ const Auth =  observer (() => {
             user.setIsAuth(true);
             history.push(MAIN_ROUTE);
         } catch (e) {
-            alert(e.responce.data.message);
-        }
-        
+            alert(e.response.data.message);
+        }  
     }
 
     return (
         <div>
-            <Container className="d-flex justify-content-center align-items-center"
+            <Container className="d-flex justify-content-center align-items-center" 
             style={{height: window.innerHeight - 54}}>
-                <Card style={{width: 600}} className="p-5">
-                    <h2 className="m-auto">{isLogin ? 'Авторизация' : 'Регистрация'}</h2>
+                <Card style={{width: 500}} className="shadowbar p-5">
+                    <h2 className="m-auto text">{isLogin ? 'Авторизация' : 'Регистрация'}</h2>
                     <Form className="d-flex flex-column">
-                        <Form.Control className="mt-2" placeholder='Ведите логин' value={email} onChange={e => setEmail(e.target.value)}/>
-                        <Form.Control className="mt-2" placeholder='Ведите пароль' value={password} onChange={e => setPassword(e.target.value)} type="password"/>
+                        <Form.Control className="mt-2" placeholder='E-mail' value={email} onChange={e => setEmail(e.target.value)}/>
+                        <Form.Control className="mt-2" placeholder='Пароль' value={password} onChange={e => setPassword(e.target.value)} type="password"/>
                     </Form>
-                    <Button onClick={click} className="mt-3" variant={"outline-success"}>
+                    <button onClick={click} className="btn navbtn">
                         {isLogin ? 'Войти' : 'Регистрация'}
-                        </Button>
+                        </button>
                     <div> {isLogin ? 
-                    <NavLink to={REGISTRATION_ROUTE}>Регистрация</NavLink> :
-                    <NavLink to={LOGIN_ROUTE}>Авторизация</NavLink>
+                    <NavLink to={REGISTRATION_ROUTE} className="text_reg">Регистрация</NavLink> :
+                    <NavLink to={LOGIN_ROUTE} className="text_reg">Авторизация</NavLink>
                     }
                     </div>
                 </Card>

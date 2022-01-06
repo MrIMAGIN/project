@@ -1,0 +1,111 @@
+.navbar-container .navbar-nav {
+    flex-direction: column !important;
+}
+
+.navbar-container .nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.navbar-container .navbar {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 100%;
+}
+
+.navbar-container .navbar-collapse {
+    align-items: flex-start;
+}
+
+.navbar-container {
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.div_color {
+    background-color: #ffffff;
+    position: relative;
+    left: 120px;
+    width: 1400px;
+    height: 500px;
+    border-radius: 40px;
+}
+
+.btn_color {
+    position: relative;
+    bottom: -10px;
+    left: 120px;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+}
+
+.btn {
+    background: #A35467;
+    border-radius: 10px;
+    color: white;
+    outline-style:none;
+}
+
+.btn:hover {
+    background: #9e5264;
+    color: white;
+}
+
+.btn_t {
+    margin-top: 10px;
+}
+
+.btn_m {
+    margin-left: 10px;
+}
+
+.main {
+    display: flex
+}
+
+.main_row {
+    flex-direction: row;
+}
+
+.menu {
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+}
+
+.nav_item_m {
+    text-align: center;
+}
+
+.nav_text {
+    margin-left: 90px; 
+    font-size: 30px;
+}
+
+.item {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.inp {
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+}
+
+.div_inp {
+    margin-left: 120px;
+}

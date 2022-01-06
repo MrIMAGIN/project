@@ -1,6 +1,6 @@
 const {User} = require('../models/model');
 const apiError = require('../error/apiError');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const generateJwt = (id, email) => {

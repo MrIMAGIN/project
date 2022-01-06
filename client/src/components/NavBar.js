@@ -6,6 +6,7 @@ import {observer} from "mobx-react-lite";
 import { LOGIN_ROUTE, MAIN_ROUTE } from '../utils/consts';
 import { Button, Nav } from 'react-bootstrap';
 import {useHistory} from 'react-router-dom';
+import '../Auth.css';
 
 const NavBar = observer(() => {
 
@@ -23,14 +24,15 @@ const NavBar = observer(() => {
     }
 
     return (
-        <nav className="navbar navbar-dark bg-dark">
-            <Navbar className="navbar navbar-light bg-light">
-                <NavLink className="navbar-brand mb-0 h1" to={MAIN_ROUTE}>Main</NavLink>
+        <nav>
+            <Navbar className="topnav">
                 {user.isAuth ?
-                <Nav className="ml-auto" style={{color: 'white'}}>
-                    <Button variant={"outline-light"} onClick={() => click()} className='ml-auto'>Выйти</Button>
+                <Nav>
+                    <button onClick={() => click()} className="btn navbtn">Выйти</button>
                 </Nav>
-                : <Button variant={"outline-light"} onClick={() => history.push(LOGIN_ROUTE)}>Авторизация</Button>}
+                : <Nav>
+                    <button className="btn navbtn" onClick={() => history.push(LOGIN_ROUTE)}>Авторизация</button>
+                </Nav>}
             </Navbar>
         </nav>
     );
